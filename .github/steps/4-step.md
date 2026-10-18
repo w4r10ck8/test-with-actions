@@ -12,7 +12,6 @@ Let's fix this to avoid anyone (accidentally) bypassing verification.
 1. In the left navigation, select **Rules** and choose **Rulesets**.
 
 1. Click the **New ruleset** and select **New branch ruleset**. Use the following settings:
-
    - **Ruleset Name:** `Protect main`
    - **Enforcement status:** `Active`
    - **Target branches:**
@@ -47,7 +46,6 @@ Lets investigate why our testing workflow failed. Is it misconfigured or is some
 1. Click on the `Python Coverage` workflow to view the logs. It will automatically navigate to the failed logs.
 
 1. After some inspection, there are 2 issues preventing merging.
-
    - 1 test is failing.
    - Coverage is below the 90% requirement.
 
@@ -56,7 +54,6 @@ Lets investigate why our testing workflow failed. Is it misconfigured or is some
 1. Open the `tests/calculations_test.py` file.
 
 1. After some investigation, we see the broken test might have been commented out because it was designed incorrectly.
-
    - A quick google search shows that the 10th entry in the Fibonacci sequence is `55`, not `89`.
 
 1. Change the test to use the correct assert value.
@@ -75,7 +72,6 @@ Lets investigate why our testing workflow failed. Is it misconfigured or is some
    ```
 
 1. Commit and push the corrected test code then wait for the workflows to run again.
-
    - This time the tests pass and we receive a detailed coverage report.
 
 ## Activity: Fix low test coverage
@@ -94,9 +90,7 @@ Let's add some more tests to increase coverage.
 
    <details>
    <summary>🪧 <b>Show:</b> Manual steps</summary>
-
    1. Open the `tests/calculations_test.py` file.
-
    1. Add the following 2 entries.
 
       ```py
@@ -126,7 +120,6 @@ Let's add some more tests to increase coverage.
 1. Commit and push the 2 new tests.
 
 1. Wait a moment for the workflows to run one final time.
-
    - The coverage comment will update to 100%.
    - The merge button will activate!
 
